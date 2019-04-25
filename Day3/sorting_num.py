@@ -1,11 +1,10 @@
 def sorting():
-    i = open("details.txt", 'r')
-    Lst = i.readlines()
+    i = open("input.txt", 'r')
+    Lst = i.read().strip().split()
     Lst.sort()
-    print (Lst)
     for line in  Lst:
-        print(line , end='\n')
-        with open('details.txt', 'w') as f:
+        print(line)
+        with open('output.txt', 'w') as f:
             for line in Lst:
                 Lst.sort()
                 f.write(line)
